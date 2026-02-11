@@ -1,0 +1,2 @@
+# Claragatchi
+Virtual pet project!
