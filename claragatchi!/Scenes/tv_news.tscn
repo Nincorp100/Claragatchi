@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dj6vid8hrlxj2"]
+
+[ext_resource type="Texture2D" uid="uid://dqla50bf4tlat" path="res://Art/Bedroom.png" id="1_078ec"]
+[ext_resource type="Texture2D" uid="uid://burdd88mb87xl" path="res://Art/Claragatchi_News_Background.png" id="2_sig3r"]
+[ext_resource type="Script" uid="uid://o5a7oy2861kh" path="res://Scenes/ticker_text.gd" id="3_7wwto"]
+[ext_resource type="Texture2D" uid="uid://bs0uqec4yumvq" path="res://Art/WhiteEna.png" id="3_sig3r"]
+[ext_resource type="Script" uid="uid://dckks08x7phy6" path="res://Scenes/news_dialogue_text.gd" id="5_3ngfp"]
+
+[node name="tv_news" type="Node2D" unique_id=100191083]
+
+[node name="TV" type="TextureRect" parent="." unique_id=1872026893]
+visible = false
+light_mask = 4
+visibility_layer = 4
+offset_left = -3389.0
+offset_top = -942.00006
+offset_right = -2389.0
+offset_bottom = -442.00006
+scale = Vector2(4.8799996, 4.8799996)
+texture = ExtResource("1_078ec")
+
+[node name="NewsStation" type="TextureRect" parent="." unique_id=1305961331]
+light_mask = 2
+visibility_layer = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_sig3r")
+expand_mode = 1
+
+[node name="TickerText" type="RichTextLabel" parent="NewsStation" unique_id=1162053852]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 1147.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 29
+bbcode_enabled = true
+scroll_following = true
+vertical_alignment = 1
+script = ExtResource("3_7wwto")
+
+[node name="EmergencyTicker" type="ColorRect" parent="NewsStation" unique_id=701794098]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 40.0
+color = Color(0.7217091, 2.659224e-06, 3.85046e-07, 1)
+
+[node name="NewsEna" type="Sprite2D" parent="." unique_id=1051328025]
+light_mask = 0
+position = Vector2(242.00002, 541)
+scale = Vector2(0.61769706, 0.61769706)
+texture = ExtResource("3_sig3r")
+
+[node name="NewsDialogueTextBox" type="ColorRect" parent="NewsEna" unique_id=1226536401]
+offset_left = -331.8779
+offset_top = -179.69974
+offset_right = 1414.9332
+offset_bottom = 116.56198
+color = Color(0.2784314, 0.2784314, 0.2784314, 0.9019608)
+
+[node name="NewsDialogueText" type="RichTextLabel" parent="NewsEna" unique_id=522637355]
+offset_left = -325.4023
+offset_top = -173.22418
+offset_right = 1406.8384
+offset_bottom = 108.46735
+theme_override_font_sizes/normal_font_size = 43
+bbcode_enabled = true
+script = ExtResource("5_3ngfp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=604545317]
+position = Vector2(576, 324)
