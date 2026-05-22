@@ -1,13 +1,38 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778959964
-::res://Art/::1775658592
+::res://::1779133146
+default_env.tres::Environment::-1::1779133146::0::1::::<><><>0<>0<><>::
+ridiculous.png::CompressedTexture2D::2602056211335473729::1779133146::1779133148::1::::<><><>0<>0<>5f602e28321998beb2bb9bc46f86b1c4<>res://.godot/imported/ridiculous.png-a64a78ecb1ff54430110261923f7dd4f.ctex::
+ridiculous.svg::CompressedTexture2D::7046423651108773658::1779133146::1779133148::1::::<><><>0<>0<>fa551da0f12a6437e888b65a0f48eb26<>res://.godot/imported/ridiculous.svg-e21db04d9320e3effae5aa7f8ec5a426.ctex::
+::res://addons/::1779133146
+::res://addons/ridiculous_coding/::1779133146
+blip.gd::GDScript::8651514539115197536::1779133146::0::1::::<>Node2D<><>0<>1<><>::
+blip.png::CompressedTexture2D::9023907321475517740::1779133146::1779133147::1::::<><><>0<>0<>db1711b993c35916ac8a71e116eff90a<>res://.godot/imported/blip.png-7449238b2e7dcd337fbb9eec8c7b957e.ctex::
+blip.tscn::PackedScene::6538322640718417285::1779133146::0::1::::<><><>0<>0<><>::res://addons/ridiculous_coding/blip.gd<>uid://d1tio2ceqgm7m::::res://addons/ridiculous_coding/blip.png<>uid://b2ood3lkcgpqb::::res://addons/ridiculous_coding/blip.wav<>uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres
+blip.wav::AudioStreamWAV::4311277633861190701::1779133146::1779133148::1::::<><><>0<>0<>e6af9cd1a774183dbbb5a6e2139c7ec0<>res://.godot/imported/blip.wav-b30aed86048a8d09a6b99458d730bd48.sample::
+boom.gd::GDScript::4071355621788049016::1779133146::0::1::::<>Node2D<><>0<>1<><>::
+boom.png::CompressedTexture2D::7999229798388025044::1779133146::1779133147::1::::<><><>0<>0<>9ad67bc376067c4f62f1de5b2eba7541<>res://.godot/imported/boom.png-8824a5a1f762eb053b72081ff54ed1ba.ctex::
+boom.tscn::PackedScene::6843633465002788314::1779133146::0::1::::<><><>0<>0<><>::uid://dl75e74oom1i3::::res://addons/ridiculous_coding/boom.png<>uid://b6841f7osi4rh::::res://addons/ridiculous_coding/boom.wav<>res://addons/ridiculous_coding/boom.gd<>uid://bvwnnnja1ur2i::::res://addons/ridiculous_coding/font.tres
+boom.wav::AudioStreamWAV::4632206838498822877::1779133146::1779133148::1::::<><><>0<>0<>4389d5d9ab781b5e632f880c0b2150e1<>res://.godot/imported/boom.wav-8be8413d6a593a69a88c5aabb324258d.sample::
+dock.gd::GDScript::6055819262767022560::1779133146::0::1::::<>Control<><>0<>1<><>::
+dock.tscn::PackedScene::4697758706199453878::1779133146::0::1::::<><><>0<>0<><>::res://addons/ridiculous_coding/dock.gd<>uid://c3ltnrdrb2qmg::::res://addons/ridiculous_coding/under.png<>uid://g6lh6kjt0ynq::::res://addons/ridiculous_coding/fireworks.wav<>uid://dmvuvaqf5uhwi::::res://addons/ridiculous_coding/progress.png
+fireworks.wav::AudioStreamWAV::8862151449780033529::1779133146::1779133148::1::::<><><>0<>0<>863452bce0eb1a8a04616564a26bffe8<>res://.godot/imported/fireworks.wav-f51025571a3b9e32e6113159ed26c3be.sample::
+font.tres::FontFile::3906615943650166882::1779133146::0::1::::<><><>0<>0<><>::uid://coiaqb8xwuaic::::res://addons/ridiculous_coding/GravityBold8.ttf
+GravityBold8.ttf::FontFile::5772028877630708402::1779133146::1779133147::1::::<><><>0<>0<>deafb63bceacf5172922b1d08f53399c<>res://.godot/imported/GravityBold8.ttf-e67aa3e4866d0a81519c9b866a8f924b.fontdata::
+newline.gd::GDScript::1998117146421105174::1779133146::0::1::::<>Node2D<><>0<>1<><>::
+newline.png::CompressedTexture2D::4255520078947183939::1779133146::1779133147::1::::<><><>0<>0<>28f4df828a6ec77491c5a856026bbe3f<>res://.godot/imported/newline.png-03ec198c1b51eb116216995dcb893beb.ctex::
+newline.tscn::PackedScene::1552142951839160889::1779133146::0::1::::<><><>0<>0<><>::res://addons/ridiculous_coding/newline.gd<>uid://b1vn1823wqae2::::res://addons/ridiculous_coding/newline.png
+plugin.cfg::TextFile::-1::1779133146::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::4212421648131954779::1779133146::0::1::::<>EditorPlugin<><>0<>1<><>::
+progress.png::CompressedTexture2D::8314659574235486316::1779133146::1779133147::1::::<><><>0<>0<>bb00aa2293dd6c3d8ffce6e69613c498<>res://.godot/imported/progress.png-7f475b7e84ff0c0c87db61c1f97b4978.ctex::
+under.png::CompressedTexture2D::7586647404456456032::1779133146::1779133147::1::::<><><>0<>0<>33207a50aa6a3cdf0210df5ea664892a<>res://.godot/imported/under.png-b737211ee1ab1b3c04a4062a02353851.ctex::
+::res://Art/::1778959967
 Bedroom.png::CompressedTexture2D::8305046593294874119::1775658592::1778959966::1::::<><><>0<>0<>13eae5f9baa8e40cd4682a2ed1c6a98c<>res://.godot/imported/Bedroom.png-314d077aded627c9d7bb996a63fdb280.ctex::
 Claragatchi_News_Background.png::CompressedTexture2D::3825481271429775729::1775658592::1778959967::1::::<><><>0<>0<>15f00d5742283fa0e15b7056346bf87a<>res://.godot/imported/Claragatchi_News_Background.png-5040afef2350174adaceeacbf678833a.ctex::
 ErrorEna.PNG::CompressedTexture2D::1404870432820473694::1775658592::1778959966::1::::<><><>0<>0<>a61bda41af62d8ece0bdc3b1323ad0c8<>res://.godot/imported/ErrorEna.PNG-f16bfe6e498e3ceed8844d507537dab2.ctex::
 icon.svg::CompressedTexture2D::6993910517216084681::1775658592::1778959966::1::::<><><>0<>0<>2c864984ef64d22b8a7412253ae68055<>res://.godot/imported/icon.svg-750f30f6912a3e29e1f50a8e1a7e4a3e.ctex::
 RedEna.png::CompressedTexture2D::8941902465297267683::1775658592::1778959966::1::::<><><>0<>0<>74998cf25f204921526f6afeadce3b7e<>res://.godot/imported/RedEna.png-a5250f876a2069b1fe243d0740592abd.ctex::
 WhiteEna.png::CompressedTexture2D::3702672440120495434::1775658592::1778959966::1::::<><><>0<>0<>ae3e9439f332e96fea21f2457ab12a8c<>res://.godot/imported/WhiteEna.png-b61573270c0e1d69523fe0fe28810528.ctex::
-::res://Art/Idle/::1775658592
+::res://Art/Idle/::1778959966
 Claragatchi_New_Frames1.png::CompressedTexture2D::4300207517724555901::1775658592::1778959966::1::::<><><>0<>0<>632ba1d57250891b4d411665bfba7f20<>res://.godot/imported/Claragatchi_New_Frames1.png-db85dcbe7c1bc950bd351f3be87e0080.ctex::
 Claragatchi_New_Frames2.png::CompressedTexture2D::3066393855713049231::1775658592::1778959966::1::::<><><>0<>0<>87a2764708f525cd1666e3266fa0ed62<>res://.godot/imported/Claragatchi_New_Frames2.png-cf433d8cf2de8f2c04e6d8b20c1954b8.ctex::
 Claragatchi_New_Frames3.png::CompressedTexture2D::3800138040509349195::1775658592::1778959966::1::::<><><>0<>0<>58babeb514d279e637bde6e425f1c76e<>res://.godot/imported/Claragatchi_New_Frames3.png-82e3dc0af6ffc3b7e59686a7fce173d1.ctex::
@@ -21,10 +46,10 @@ platform.tscn::PackedScene::6940973885267938843::1775658592::0::1::::<><><>0<>0<
 ticker_text.gd::GDScript::1044633062633515691::1775658592::0::1::::<>RichTextLabel<><>0<>0<><>::
 tv_minigame.tscn::PackedScene::4030109242348514459::1775658592::0::1::::<><><>0<>0<><>::
 tv_news.tscn::PackedScene::7856246906286603697::1775658592::0::1::::<><><>0<>0<><>::uid://dqla50bf4tlat::::res://Art/Bedroom.png<>uid://burdd88mb87xl::::res://Art/Claragatchi_News_Background.png<>uid://o5a7oy2861kh::::res://Scenes/ticker_text.gd<>uid://bs0uqec4yumvq::::res://Art/WhiteEna.png<>uid://dckks08x7phy6::::res://Scenes/news_dialogue_text.gd
-::res://Scenes/Main Room/::1775658592
+::res://Scenes/Main Room/::1778967899
 bed_area.gd::GDScript::4903654060988289952::1775658592::0::1::::<>Area2D<><>0<>0<><>::
 clarea.gd::GDScript::8506537804006057912::1775658592::0::1::::<>Area2D<><>0<>0<><>::
-main_room.tscn::PackedScene::3063910472127926544::1775658592::0::1::::<><><>0<>0<><>::uid://dqla50bf4tlat::::res://Art/Bedroom.png<>uid://b2jb13yon41p6::::res://Art/Idle/Claragatchi_New_Frames1.png<>uid://derns6iodm8vg::::res://Scripts/main_clara.gd<>uid://bjxnb878xakrv::::res://Art/Idle/Claragatchi_New_Frames2.png<>uid://bue2yom38cvn4::::res://Art/Idle/Claragatchi_New_Frames3.png<>uid://cj0yodmbcvyuu::::res://Art/Idle/Claragatchi_New_Frames4.png<>uid://hqq2hmeu04ye::::res://Art/Idle/Claragatchi_New_Frames5.png<>uid://bsctii52rfoca::::res://Art/Idle/Claragatchi_New_Frames6.png<>uid://cxbm0ibnf1ogy::::res://Art/Idle/Claragatchi_New_Frames7.png<>uid://ch22j5elcawgj::::res://Scripts/BlabText.gd<>uid://dtgvo1v26vkgm::::res://Scenes/Main Room/clarea.gd<>uid://cb4mp3v075xdo::::res://Scenes/Main Room/bed_area.gd<>uid://b3njat8kj7f15::::res://Scenes/Main Room/window_area.gd<>uid://c1k3kabe8t5hy::::res://Scenes/Main Room/tv_area.gd
+main_room.tscn::PackedScene::3063910472127926544::1778967899::0::1::::<><><>0<>0<><>::uid://dqla50bf4tlat::::res://Art/Bedroom.png<>uid://b2jb13yon41p6::::res://Art/Idle/Claragatchi_New_Frames1.png<>uid://derns6iodm8vg::::res://Scripts/main_clara.gd<>uid://bjxnb878xakrv::::res://Art/Idle/Claragatchi_New_Frames2.png<>uid://bue2yom38cvn4::::res://Art/Idle/Claragatchi_New_Frames3.png<>uid://cj0yodmbcvyuu::::res://Art/Idle/Claragatchi_New_Frames4.png<>uid://hqq2hmeu04ye::::res://Art/Idle/Claragatchi_New_Frames5.png<>uid://bsctii52rfoca::::res://Art/Idle/Claragatchi_New_Frames6.png<>uid://cxbm0ibnf1ogy::::res://Art/Idle/Claragatchi_New_Frames7.png<>uid://ch22j5elcawgj::::res://Scripts/BlabText.gd<>uid://dtgvo1v26vkgm::::res://Scenes/Main Room/clarea.gd<>uid://cb4mp3v075xdo::::res://Scenes/Main Room/bed_area.gd<>uid://b3njat8kj7f15::::res://Scenes/Main Room/window_area.gd<>uid://c1k3kabe8t5hy::::res://Scenes/Main Room/tv_area.gd
 tv_area.gd::GDScript::6620113015023578726::1775658592::0::1::::<>Area2D<><>0<>0<><>::
 window_area.gd::GDScript::4379092718685527222::1775658592::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Scripts/::1775658592

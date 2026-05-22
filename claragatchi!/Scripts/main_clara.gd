@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 @export var minigame = ["Bed!", "Window!", "TV!"]
