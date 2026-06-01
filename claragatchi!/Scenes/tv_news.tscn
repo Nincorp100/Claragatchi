@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dqla50bf4tlat" path="res://Art/Bedroom.png" id="1_078ec"]
 [ext_resource type="Texture2D" uid="uid://burdd88mb87xl" path="res://Art/Claragatchi_News_Background.png" id="2_sig3r"]
-[ext_resource type="Script" uid="uid://o5a7oy2861kh" path="res://Scenes/ticker_text.gd" id="3_7wwto"]
+[ext_resource type="Script" uid="uid://o5a7oy2861kh" path="res://Scripts/ticker_text.gd" id="3_7wwto"]
 [ext_resource type="Texture2D" uid="uid://bs0uqec4yumvq" path="res://Art/WhiteEna.png" id="3_sig3r"]
-[ext_resource type="Script" uid="uid://dckks08x7phy6" path="res://Scenes/news_dialogue_text.gd" id="5_3ngfp"]
+[ext_resource type="Script" uid="uid://dckks08x7phy6" path="res://Scripts/news_dialogue_text.gd" id="5_3ngfp"]
+
 
 [node name="tv_news" type="Node2D" unique_id=100191083]
 

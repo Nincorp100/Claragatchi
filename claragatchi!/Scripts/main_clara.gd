@@ -48,7 +48,11 @@ func _on_window_area_area_entered(area: Area2D) -> void:
 func _on_tv_area_body_exited(body: Node2D) -> void:
 	$Blabs/BlabTextBox.hide()
 	$Notifications/NotificationText.text = ""
-
+func _on_tv_area_area_entered(area: Area2D) -> void:
+	channel_index = minigame[2]
+	$Blabs/BlabTextBox.show()
+	$Blabs/BlabText.text = ""
+	$Notifications/NotificationText.text = minigame[2]
 
 func _on_bed_area_area_entered(area: Area2D) -> void:
 	channel_index = minigame[0]
@@ -60,11 +64,7 @@ func _on_bed_area_area_entered(area: Area2D) -> void:
 
 
 
-func _on_tv_area_area_entered(area: Area2D) -> void:
-	channel_index = minigame[2]
-	$Blabs/BlabTextBox.show()
-	$Blabs/BlabText.text = ""
-	$Notifications/NotificationText.text = minigame[2]
+
 	#if minigame[2]:	
 		#if Input.is_action_pressed("MainSelect"):
 			#channel_index = randi_range(0, 1)
