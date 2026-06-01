@@ -61,6 +61,7 @@ material = SubResource("StandardMaterial3D_o5d0b")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aldop"]
 
 [node name="Main Room" type="Node2D" unique_id=1856704980]
+scale = Vector2(1.3520033, 1.3520033)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=75001255]
 offset_right = 40.0
@@ -160,16 +161,14 @@ position = Vector2(-8, -8)
 script = ExtResource("11_3cnas")
 
 [node name="PlayerAreaRect" type="CollisionShape2D" parent="MainClara/Clarea" unique_id=1169058634]
-light_mask = 4
-visibility_layer = 4
 z_index = 1
 shape = SubResource("RectangleShape2D_sk648")
 
 [node name="Walls" type="Node" parent="." unique_id=1800434122]
 
 [node name="Floor" type="StaticBody2D" parent="Walls" unique_id=546085940]
-position = Vector2(502, 436)
-scale = Vector2(1.0513, 1.2294)
+position = Vector2(684, 584)
+scale = Vector2(1.4113024, 1.2294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor" unique_id=373092971]
 scale = Vector2(52, 1)
@@ -182,7 +181,7 @@ scale = Vector2(52, 1)
 shape = SubResource("RectangleShape2D_k0u3k")
 
 [node name="LeftWall" type="StaticBody2D" parent="Walls" unique_id=1815115890]
-position = Vector2(-5, 241)
+position = Vector2(0.9999995, 317)
 rotation = -1.5708
 scale = Vector2(0.489457, 0.572377)
 
@@ -197,7 +196,7 @@ scale = Vector2(52, 1)
 shape = SubResource("RectangleShape2D_k0u3k")
 
 [node name="RightWall" type="StaticBody2D" parent="Walls" unique_id=1619599516]
-position = Vector2(1005, 241)
+position = Vector2(1345, 317)
 rotation = -1.5708
 scale = Vector2(0.489457, 0.572377)
 
@@ -246,4 +245,4 @@ shape = SubResource("RectangleShape2D_aldop")
 
 [connection signal="timeout" from="MainClara/Blabs/BlabTime" to="MainClara/Blabs/BlabText" method="_on_blab_time_timeout"]
 [connection signal="area_entered" from="MainClara/Clarea" to="TVArea" method="_on_clarea_area_entered"]
-[connection signal="area_entered" from="TVArea" to="MainClara/Clarea" method="_on_tv_area_area_entered"]
+[connection signal="area_entered" from="TVArea" to="MainClara" method="_on_tv_area_area_entered"]

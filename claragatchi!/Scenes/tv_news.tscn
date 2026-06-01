@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bs0uqec4yumvq" path="res://Art/WhiteEna.png" id="3_sig3r"]
 [ext_resource type="Script" uid="uid://dckks08x7phy6" path="res://Scripts/news_dialogue_text.gd" id="5_3ngfp"]
 
-
 [node name="tv_news" type="Node2D" unique_id=100191083]
 
 [node name="TV" type="TextureRect" parent="." unique_id=1872026893]

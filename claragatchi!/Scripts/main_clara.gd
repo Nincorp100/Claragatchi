@@ -23,7 +23,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if Input.is_action_just_pressed("MainMoveLeft"):
+		$IdleClara.flip_h = true
+	if Input.is_action_just_pressed("MainMoveRight"):
+		$IdleClara.flip_h = false
 	move_and_slide()
 
 	
@@ -53,6 +56,8 @@ func _on_tv_area_area_entered(area: Area2D) -> void:
 	$Blabs/BlabTextBox.show()
 	$Blabs/BlabText.text = ""
 	$Notifications/NotificationText.text = minigame[2]
+	if Input.is_action_pressed("MainSelect"):
+		get_tree().change_scene_to_file("res://Scenes/tv_news.tscn")
 
 func _on_bed_area_area_entered(area: Area2D) -> void:
 	channel_index = minigame[0]
