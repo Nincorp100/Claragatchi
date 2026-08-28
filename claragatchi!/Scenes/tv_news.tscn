@@ -5,6 +5,52 @@
 [ext_resource type="Script" uid="uid://o5a7oy2861kh" path="res://Scripts/ticker_text.gd" id="3_7wwto"]
 [ext_resource type="Texture2D" uid="uid://bs0uqec4yumvq" path="res://Art/WhiteEna.png" id="3_sig3r"]
 [ext_resource type="Script" uid="uid://dckks08x7phy6" path="res://Scripts/news_dialogue_text.gd" id="5_3ngfp"]
+[ext_resource type="Script" uid="uid://derns6iodm8vg" path="res://Scripts/main_clara.gd" id="6_ty7ij"]
+[ext_resource type="Texture2D" uid="uid://b2jb13yon41p6" path="res://Art/Idle/Claragatchi_New_Frames1.png" id="7_deffu"]
+[ext_resource type="Texture2D" uid="uid://bjxnb878xakrv" path="res://Art/Idle/Claragatchi_New_Frames2.png" id="8_pyu4e"]
+[ext_resource type="Texture2D" uid="uid://bue2yom38cvn4" path="res://Art/Idle/Claragatchi_New_Frames3.png" id="9_0ydsh"]
+[ext_resource type="Texture2D" uid="uid://cj0yodmbcvyuu" path="res://Art/Idle/Claragatchi_New_Frames4.png" id="10_d5j0x"]
+[ext_resource type="Texture2D" uid="uid://hqq2hmeu04ye" path="res://Art/Idle/Claragatchi_New_Frames5.png" id="11_36dad"]
+[ext_resource type="Texture2D" uid="uid://bsctii52rfoca" path="res://Art/Idle/Claragatchi_New_Frames6.png" id="12_q6051"]
+[ext_resource type="Texture2D" uid="uid://cxbm0ibnf1ogy" path="res://Art/Idle/Claragatchi_New_Frames7.png" id="13_40hc3"]
+[ext_resource type="Script" uid="uid://ch22j5elcawgj" path="res://Scripts/BlabText.gd" id="14_u471t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08pr7"]
+size = Vector2(140, 202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yi5my"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_deffu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pyu4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ydsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d5j0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_36dad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q6051")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_40hc3")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5d0b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_pw0co"]
+material = SubResource("StandardMaterial3D_o5d0b")
 
 [node name="tv_news" type="Node2D" unique_id=100191083]
 
@@ -68,3 +114,95 @@ script = ExtResource("5_3ngfp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=604545317]
 position = Vector2(576, 324)
+
+[node name="MainClara" type="CharacterBody2D" parent="." unique_id=1730659940]
+visible = false
+light_mask = 4
+visibility_layer = 4
+position = Vector2(515, 329)
+script = ExtResource("6_ty7ij")
+
+[node name="CharacterRect" type="CollisionShape2D" parent="MainClara" unique_id=1765747904]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_08pr7")
+
+[node name="IdleClara" type="AnimatedSprite2D" parent="MainClara" unique_id=1185006845]
+light_mask = 6
+visibility_layer = 6
+z_index = 1
+scale = Vector2(0.777865, 0.777865)
+sprite_frames = SubResource("SpriteFrames_yi5my")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Blabs" type="Control" parent="MainClara" unique_id=340051704]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlabTextBox" type="MeshInstance2D" parent="MainClara/Blabs" unique_id=496122218]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(102.285934, -144.67363)
+scale = Vector2(167.61787, 96.34729)
+mesh = SubResource("SphereMesh_pw0co")
+
+[node name="BlabText" type="RichTextLabel" parent="MainClara/Blabs" unique_id=882204508]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 39.0
+offset_top = -180.0
+offset_right = 166.0
+offset_bottom = -107.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("14_u471t")
+
+[node name="BlabTime" type="Timer" parent="MainClara/Blabs" unique_id=558703647]
+wait_time = 5.0
+
+[node name="Notifications" type="Control" parent="MainClara" unique_id=802436303]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="NotificationText" type="RichTextLabel" parent="MainClara/Notifications" unique_id=1383604062]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 59.0
+offset_top = -186.0
+offset_right = 144.0
+offset_bottom = -156.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MainClara/Notifications" unique_id=388585366]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 140.0
+offset_right = 543.0
+offset_bottom = 211.0
+
+[node name="Clarea" type="Area2D" parent="MainClara" unique_id=237939918]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(-8, -8)
+
+[node name="PlayerAreaRect" type="CollisionShape2D" parent="MainClara/Clarea" unique_id=253998478]
+z_index = 1
+shape = SubResource("RectangleShape2D_08pr7")
+
+[connection signal="timeout" from="MainClara/Blabs/BlabTime" to="MainClara/Blabs/BlabText" method="_on_blab_time_timeout"]

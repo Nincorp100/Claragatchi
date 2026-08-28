@@ -10,10 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bsctii52rfoca" path="res://Art/Idle/Claragatchi_New_Frames6.png" id="8_yd3lk"]
 [ext_resource type="Texture2D" uid="uid://cxbm0ibnf1ogy" path="res://Art/Idle/Claragatchi_New_Frames7.png" id="9_u7lq8"]
 [ext_resource type="Script" uid="uid://ch22j5elcawgj" path="res://Scripts/BlabText.gd" id="10_yqjy5"]
-[ext_resource type="Script" uid="uid://dtgvo1v26vkgm" path="res://Scripts/clarea.gd" id="11_3cnas"]
-[ext_resource type="Script" uid="uid://cb4mp3v075xdo" path="res://Scripts/bed_area.gd" id="12_sh4a2"]
-[ext_resource type="Script" uid="uid://b3njat8kj7f15" path="res://Scripts/window_area.gd" id="13_wl31s"]
-[ext_resource type="Script" uid="uid://c1k3kabe8t5hy" path="res://Scripts/tv_area.gd" id="14_10xrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sk648"]
 size = Vector2(140, 202)
@@ -42,15 +38,15 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_u7lq8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle",
 "speed": 3.0
 }]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5d0b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oool8"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_0hjoh"]
-material = SubResource("StandardMaterial3D_o5d0b")
+material = SubResource("StandardMaterial3D_oool8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0u3k"]
 
@@ -79,13 +75,13 @@ visibility_layer = 4
 position = Vector2(515, 329)
 script = ExtResource("2_guc7c")
 
-[node name="CharacterRect" type="CollisionShape2D" parent="MainClara" unique_id=1342038086]
+[node name="_CollisionShape2D_20854" type="CollisionShape2D" parent="MainClara" unique_id=1342038086]
 light_mask = 4
 visibility_layer = 4
 position = Vector2(-8, -8)
 shape = SubResource("RectangleShape2D_sk648")
 
-[node name="IdleClara" type="AnimatedSprite2D" parent="MainClara" unique_id=432442565]
+[node name="@AnimatedSprite2D@20855" type="AnimatedSprite2D" parent="MainClara" unique_id=432442565]
 light_mask = 6
 visibility_layer = 6
 z_index = 1
@@ -95,13 +91,13 @@ animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.515831
 
-[node name="Blabs" type="Control" parent="MainClara" unique_id=132015303]
+[node name="_Control_20856" type="Control" parent="MainClara" unique_id=132015303]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BlabTextBox" type="MeshInstance2D" parent="MainClara/Blabs" unique_id=1701469101]
+[node name="BlabTextBox" type="MeshInstance2D" parent="MainClara/_Control_20856" unique_id=1701469101]
 light_mask = 4
 visibility_layer = 4
 z_index = 1
@@ -109,7 +105,7 @@ position = Vector2(102.285934, -144.67363)
 scale = Vector2(167.61787, 96.34729)
 mesh = SubResource("SphereMesh_0hjoh")
 
-[node name="BlabText" type="RichTextLabel" parent="MainClara/Blabs" unique_id=1795006768]
+[node name="BlabText" type="RichTextLabel" parent="MainClara/_Control_20856" unique_id=1795006768]
 light_mask = 4
 visibility_layer = 4
 z_index = 2
@@ -125,14 +121,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("10_yqjy5")
 
-[node name="BlabTime" type="Timer" parent="MainClara/Blabs" unique_id=2132915853]
+[node name="BlabTime" type="Timer" parent="MainClara/_Control_20856" unique_id=2132915853]
 wait_time = 5.0
 
-[node name="Notifications" type="Control" parent="MainClara" unique_id=2055469368]
+[node name="_Control_20857" type="Control" parent="MainClara" unique_id=2055469368]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="NotificationText" type="RichTextLabel" parent="MainClara/Notifications" unique_id=1454362652]
+[node name="NotificationText" type="RichTextLabel" parent="MainClara/_Control_20857" unique_id=1454362652]
 light_mask = 4
 visibility_layer = 4
 z_index = 2
@@ -146,21 +142,20 @@ bbcode_enabled = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MainClara/Notifications" unique_id=386293732]
+[node name="TextureRect" type="TextureRect" parent="MainClara/_Control_20857" unique_id=386293732]
 layout_mode = 0
 offset_left = 472.0
 offset_top = 140.0
 offset_right = 543.0
 offset_bottom = 211.0
 
-[node name="Clarea" type="Area2D" parent="MainClara" unique_id=1964508171]
+[node name="_Area2D_20858" type="Area2D" parent="MainClara" unique_id=1964508171]
 light_mask = 4
 visibility_layer = 4
 z_index = 1
 position = Vector2(-8, -8)
-script = ExtResource("11_3cnas")
 
-[node name="PlayerAreaRect" type="CollisionShape2D" parent="MainClara/Clarea" unique_id=1169058634]
+[node name="PlayerAreaRect" type="CollisionShape2D" parent="MainClara/_Area2D_20858" unique_id=1169058634]
 z_index = 1
 shape = SubResource("RectangleShape2D_sk648")
 
@@ -216,7 +211,6 @@ visibility_layer = 4
 z_index = 1
 position = Vector2(85, 308.00003)
 scale = Vector2(7.676161, -11.29728)
-script = ExtResource("12_sh4a2")
 
 [node name="BedAreaShape" type="CollisionShape2D" parent="BedArea" unique_id=767778242]
 shape = SubResource("RectangleShape2D_o5d0b")
@@ -227,7 +221,6 @@ visibility_layer = 4
 z_index = 1
 position = Vector2(430, 195)
 scale = Vector2(7.7199945, 9.480001)
-script = ExtResource("13_wl31s")
 
 [node name="WindowAreaShape" type="CollisionShape2D" parent="WindowArea" unique_id=1606100089]
 shape = SubResource("RectangleShape2D_0hjoh")
@@ -238,11 +231,14 @@ visibility_layer = 4
 z_index = 1
 position = Vector2(815, 260)
 scale = Vector2(8.439985, 4.919997)
-script = ExtResource("14_10xrm")
 
 [node name="TVAreaShape" type="CollisionShape2D" parent="TVArea" unique_id=1083465802]
 shape = SubResource("RectangleShape2D_aldop")
 
-[connection signal="timeout" from="MainClara/Blabs/BlabTime" to="MainClara/Blabs/BlabText" method="_on_blab_time_timeout"]
-[connection signal="area_entered" from="MainClara/Clarea" to="TVArea" method="_on_clarea_area_entered"]
+[connection signal="timeout" from="MainClara/_Control_20856/BlabTime" to="MainClara/_Control_20856/BlabText" method="_on_blab_time_timeout"]
+[connection signal="area_entered" from="BedArea" to="MainClara" method="_on_bed_area_area_entered"]
+[connection signal="area_exited" from="BedArea" to="MainClara" method="_on_bed_area_area_exited"]
+[connection signal="area_entered" from="WindowArea" to="MainClara" method="_on_window_area_area_entered"]
+[connection signal="area_exited" from="WindowArea" to="MainClara" method="_on_window_area_area_exited"]
 [connection signal="area_entered" from="TVArea" to="MainClara" method="_on_tv_area_area_entered"]
+[connection signal="area_exited" from="TVArea" to="MainClara" method="_on_tv_area_area_exited"]

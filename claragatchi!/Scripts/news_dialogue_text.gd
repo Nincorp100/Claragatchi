@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		text = ""
 		news_index = news_index + 1
 		text = news_report[news_index]
-		if news_index == 5:
-			get_tree().change_scene_to_file("res://Scenes/Main Room/main_room.tscn")
+		if news_index >= 5:
+			get_tree().change_scene_to_file("res://Scenes/main_room.tscn")
 			
 		

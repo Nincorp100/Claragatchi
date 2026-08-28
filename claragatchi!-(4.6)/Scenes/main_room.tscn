@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://bjwgfmpp7ntuu"]
+
+[ext_resource type="Texture2D" uid="uid://dqla50bf4tlat" path="res://Art/Bedroom.png" id="1_xqkij"]
+[ext_resource type="Script" uid="uid://derns6iodm8vg" path="res://Scripts/main_clara.gd" id="2_guc7c"]
+[ext_resource type="Texture2D" uid="uid://b2jb13yon41p6" path="res://Art/Idle/Claragatchi_New_Frames1.png" id="3_cw24y"]
+[ext_resource type="Texture2D" uid="uid://bjxnb878xakrv" path="res://Art/Idle/Claragatchi_New_Frames2.png" id="4_84vt4"]
+[ext_resource type="Texture2D" uid="uid://bue2yom38cvn4" path="res://Art/Idle/Claragatchi_New_Frames3.png" id="5_t7dy2"]
+[ext_resource type="Texture2D" uid="uid://cj0yodmbcvyuu" path="res://Art/Idle/Claragatchi_New_Frames4.png" id="6_pl7id"]
+[ext_resource type="Texture2D" uid="uid://hqq2hmeu04ye" path="res://Art/Idle/Claragatchi_New_Frames5.png" id="7_wf0t3"]
+[ext_resource type="Texture2D" uid="uid://bsctii52rfoca" path="res://Art/Idle/Claragatchi_New_Frames6.png" id="8_yd3lk"]
+[ext_resource type="Texture2D" uid="uid://cxbm0ibnf1ogy" path="res://Art/Idle/Claragatchi_New_Frames7.png" id="9_u7lq8"]
+[ext_resource type="Script" uid="uid://ch22j5elcawgj" path="res://Scripts/BlabText.gd" id="10_yqjy5"]
+[ext_resource type="Script" uid="uid://dtgvo1v26vkgm" path="res://Scripts/clarea.gd" id="11_3cnas"]
+[ext_resource type="Script" uid="uid://cb4mp3v075xdo" path="res://Scripts/bed_area.gd" id="12_sh4a2"]
+[ext_resource type="Script" uid="uid://b3njat8kj7f15" path="res://Scripts/window_area.gd" id="13_wl31s"]
+[ext_resource type="Script" uid="uid://c1k3kabe8t5hy" path="res://Scripts/tv_area.gd" id="14_10xrm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk648"]
+size = Vector2(140, 202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pgrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cw24y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_84vt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t7dy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pl7id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wf0t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yd3lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u7lq8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5d0b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0hjoh"]
+material = SubResource("StandardMaterial3D_o5d0b")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0u3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5d0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hjoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aldop"]
+
+[node name="Main Room" type="Node2D" unique_id=1856704980]
+scale = Vector2(1.3520033, 1.3520033)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=75001255]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xqkij")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1654199217]
+visible = false
+offset_right = 999.0
+offset_bottom = 424.0
+
+[node name="MainClara" type="CharacterBody2D" parent="." unique_id=1763452051]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(515, 329)
+script = ExtResource("2_guc7c")
+
+[node name="CharacterRect" type="CollisionShape2D" parent="MainClara" unique_id=1342038086]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_sk648")
+
+[node name="IdleClara" type="AnimatedSprite2D" parent="MainClara" unique_id=432442565]
+light_mask = 6
+visibility_layer = 6
+z_index = 1
+scale = Vector2(0.777865, 0.777865)
+sprite_frames = SubResource("SpriteFrames_0pgrc")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.515831
+
+[node name="Blabs" type="Control" parent="MainClara" unique_id=132015303]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlabTextBox" type="MeshInstance2D" parent="MainClara/Blabs" unique_id=1701469101]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(102.285934, -144.67363)
+scale = Vector2(167.61787, 96.34729)
+mesh = SubResource("SphereMesh_0hjoh")
+
+[node name="BlabText" type="RichTextLabel" parent="MainClara/Blabs" unique_id=1795006768]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 39.0
+offset_top = -180.0
+offset_right = 166.0
+offset_bottom = -107.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_yqjy5")
+
+[node name="BlabTime" type="Timer" parent="MainClara/Blabs" unique_id=2132915853]
+wait_time = 5.0
+
+[node name="Notifications" type="Control" parent="MainClara" unique_id=2055469368]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="NotificationText" type="RichTextLabel" parent="MainClara/Notifications" unique_id=1454362652]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 59.0
+offset_top = -186.0
+offset_right = 144.0
+offset_bottom = -156.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MainClara/Notifications" unique_id=386293732]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 140.0
+offset_right = 543.0
+offset_bottom = 211.0
+
+[node name="Clarea" type="Area2D" parent="MainClara" unique_id=1964508171]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(-8, -8)
+script = ExtResource("11_3cnas")
+
+[node name="PlayerAreaRect" type="CollisionShape2D" parent="MainClara/Clarea" unique_id=1169058634]
+z_index = 1
+shape = SubResource("RectangleShape2D_sk648")
+
+[node name="Walls" type="Node" parent="." unique_id=1800434122]
+
+[node name="Floor" type="StaticBody2D" parent="Walls" unique_id=546085940]
+position = Vector2(684, 584)
+scale = Vector2(1.4113024, 1.2294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor" unique_id=373092971]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="Area2D" type="Area2D" parent="Walls/Floor" unique_id=1681446221]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/Floor/Area2D" unique_id=92660769]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls" unique_id=1815115890]
+position = Vector2(0.9999995, 317)
+rotation = -1.5708
+scale = Vector2(0.489457, 0.572377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall" unique_id=531873717]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="Area2D" type="Area2D" parent="Walls/LeftWall" unique_id=1055287129]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/LeftWall/Area2D" unique_id=489619335]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="RightWall" type="StaticBody2D" parent="Walls" unique_id=1619599516]
+position = Vector2(1345, 317)
+rotation = -1.5708
+scale = Vector2(0.489457, 0.572377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall" unique_id=1885854011]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="Area2D" type="Area2D" parent="Walls/RightWall" unique_id=343187611]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/RightWall/Area2D" unique_id=583774491]
+scale = Vector2(52, 1)
+shape = SubResource("RectangleShape2D_k0u3k")
+
+[node name="BedArea" type="Area2D" parent="." unique_id=1392790576]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(85, 308.00003)
+scale = Vector2(7.676161, -11.29728)
+script = ExtResource("12_sh4a2")
+
+[node name="BedAreaShape" type="CollisionShape2D" parent="BedArea" unique_id=767778242]
+shape = SubResource("RectangleShape2D_o5d0b")
+
+[node name="WindowArea" type="Area2D" parent="." unique_id=1192701430]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(430, 195)
+scale = Vector2(7.7199945, 9.480001)
+script = ExtResource("13_wl31s")
+
+[node name="WindowAreaShape" type="CollisionShape2D" parent="WindowArea" unique_id=1606100089]
+shape = SubResource("RectangleShape2D_0hjoh")
+
+[node name="TVArea" type="Area2D" parent="." unique_id=731097656]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(815, 260)
+scale = Vector2(8.439985, 4.919997)
+script = ExtResource("14_10xrm")
+
+[node name="TVAreaShape" type="CollisionShape2D" parent="TVArea" unique_id=1083465802]
+shape = SubResource("RectangleShape2D_aldop")
+
+[connection signal="timeout" from="MainClara/Blabs/BlabTime" to="MainClara/Blabs/BlabText" method="_on_blab_time_timeout"]
+[connection signal="area_entered" from="MainClara/Clarea" to="TVArea" method="_on_clarea_area_entered"]
+[connection signal="area_entered" from="TVArea" to="MainClara" method="_on_tv_area_area_entered"]

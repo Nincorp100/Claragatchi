@@ -1,0 +1,13 @@
+OmniLight3D
+Camera3D
+MeshInstance3D
+TextureRect
+Node3D
+SubViewport
+ColorRect
+CSGMesh3D
+CollisionShape3D
+StaticBody3D
+CanvasLayer
+Window
+Node

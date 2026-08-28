@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bliucir2ivgrh"]
+
+[ext_resource type="Script" uid="uid://derns6iodm8vg" path="res://Scripts/main_clara.gd" id="1_hmxut"]
+[ext_resource type="Texture2D" uid="uid://b2jb13yon41p6" path="res://Art/Idle/Claragatchi_New_Frames1.png" id="2_htgl7"]
+[ext_resource type="Texture2D" uid="uid://bjxnb878xakrv" path="res://Art/Idle/Claragatchi_New_Frames2.png" id="3_lc3h5"]
+[ext_resource type="Texture2D" uid="uid://bue2yom38cvn4" path="res://Art/Idle/Claragatchi_New_Frames3.png" id="4_ltioq"]
+[ext_resource type="Texture2D" uid="uid://cj0yodmbcvyuu" path="res://Art/Idle/Claragatchi_New_Frames4.png" id="5_al7t2"]
+[ext_resource type="Texture2D" uid="uid://hqq2hmeu04ye" path="res://Art/Idle/Claragatchi_New_Frames5.png" id="6_x008k"]
+[ext_resource type="Texture2D" uid="uid://bsctii52rfoca" path="res://Art/Idle/Claragatchi_New_Frames6.png" id="7_bfsv6"]
+[ext_resource type="Texture2D" uid="uid://cxbm0ibnf1ogy" path="res://Art/Idle/Claragatchi_New_Frames7.png" id="8_rrqgj"]
+[ext_resource type="Script" uid="uid://ch22j5elcawgj" path="res://Scripts/BlabText.gd" id="9_vgnaq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk648"]
+size = Vector2(140, 202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pgrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_htgl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lc3h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ltioq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_al7t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x008k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bfsv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rrqgj")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oool8"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0hjoh"]
+material = SubResource("StandardMaterial3D_oool8")
+
+[node name="MainClara" type="CharacterBody2D" unique_id=376990051]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(515, 329)
+script = ExtResource("1_hmxut")
+
+[node name="CharacterRect" type="CollisionShape2D" parent="." unique_id=793370260]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_sk648")
+
+[node name="IdleClara" type="AnimatedSprite2D" parent="." unique_id=1753217590]
+light_mask = 6
+visibility_layer = 6
+z_index = 1
+scale = Vector2(0.777865, 0.777865)
+sprite_frames = SubResource("SpriteFrames_0pgrc")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.515831
+
+[node name="Blabs" type="Control" parent="." unique_id=1709164423]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlabTextBox" type="MeshInstance2D" parent="Blabs" unique_id=1545165862]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(102.285934, -144.67363)
+scale = Vector2(167.61787, 96.34729)
+mesh = SubResource("SphereMesh_0hjoh")
+
+[node name="BlabText" type="RichTextLabel" parent="Blabs" unique_id=280107239]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 39.0
+offset_top = -180.0
+offset_right = 166.0
+offset_bottom = -107.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_vgnaq")
+
+[node name="BlabTime" type="Timer" parent="Blabs" unique_id=1685456226]
+wait_time = 5.0
+
+[node name="Notifications" type="Control" parent="." unique_id=813114438]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="NotificationText" type="RichTextLabel" parent="Notifications" unique_id=925439696]
+light_mask = 4
+visibility_layer = 4
+z_index = 2
+layout_mode = 0
+offset_left = 59.0
+offset_top = -186.0
+offset_right = 144.0
+offset_bottom = -156.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Notifications" unique_id=1986336920]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 140.0
+offset_right = 543.0
+offset_bottom = 211.0
+
+[node name="Clarea" type="Area2D" parent="." unique_id=759750394]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+position = Vector2(-8, -8)
+
+[node name="PlayerAreaRect" type="CollisionShape2D" parent="Clarea" unique_id=1466468736]
+z_index = 1
+shape = SubResource("RectangleShape2D_sk648")
+
+[connection signal="timeout" from="Blabs/BlabTime" to="Blabs/BlabText" method="_on_blab_time_timeout"]
