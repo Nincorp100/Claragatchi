@@ -72,7 +72,7 @@ offset_bottom = 424.0
 [node name="MainClara" type="CharacterBody2D" parent="." unique_id=1763452051]
 light_mask = 4
 visibility_layer = 4
-position = Vector2(515, 329)
+position = Vector2(597.63165, 326.18262)
 script = ExtResource("2_guc7c")
 
 [node name="_CollisionShape2D_20854" type="CollisionShape2D" parent="MainClara" unique_id=1342038086]
